@@ -5,11 +5,11 @@ import {IconAlertCircle} from '@tabler/icons';
 import { useForm} from '@mantine/form';
 import {useNavigate} from "react-router-dom";
 
-export default function CreateGoal(props: { userId: any; getGoals: () => void; }) { //needs to be changed
+export default function CreateGoal() {
     const [status, setStatus] = useState(0);
 
     const [newGoal, setNewGoal] = useState({
-        "userId": props.userId,
+        // "userId": props.userId,
         "aim": "",
         "category": "",
         "description": "",
@@ -28,7 +28,7 @@ export default function CreateGoal(props: { userId: any; getGoals: () => void; }
 
     function clear() {
         setNewGoal({
-            "userId": props.userId,
+           // "userId": props.userId,
             "aim": "",
             "category": "",
             "description": "",
@@ -75,7 +75,7 @@ export default function CreateGoal(props: { userId: any; getGoals: () => void; }
         goalForm.validate();
 
         await axios.post("http://localhost:8080/goal", {
-            "userId": userId,
+            //"userId": userId,
             "definedGoal": values.definedGoal,
             "category": values.category,
             "description": values.description,
@@ -84,7 +84,7 @@ export default function CreateGoal(props: { userId: any; getGoals: () => void; }
         }).then(response => {
             console.log(response)
             setStatus(response.status)
-            props.getGoals();
+            //props.getGoals();
             goalForm.reset();
         }).catch(function (error) {
             setStatus(error.response.status)
