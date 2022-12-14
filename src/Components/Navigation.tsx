@@ -184,20 +184,6 @@ export function Navigation() {
                                 <SimpleGrid cols={2} spacing={0}>
                                     {links}
                                 </SimpleGrid>
-
-                                <div className={classes.dropdownFooter}>
-                                    <Group position="apart">
-                                        <div>
-                                            <Text weight={500} size="sm">
-                                                Get started
-                                            </Text>
-                                            <Text size="xs" color="dimmed">
-                                                Their food sources have decreased, and their numbers
-                                            </Text>
-                                        </div>
-                                        <Button variant="default">Get started</Button>
-                                    </Group>
-                                </div>
                             </HoverCard.Dropdown>
                         </HoverCard>
                         <Link to={"/profile"} className={classes.link}>
