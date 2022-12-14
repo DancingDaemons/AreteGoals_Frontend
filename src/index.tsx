@@ -4,15 +4,24 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router} from "react-router-dom";
+import { MantineProvider } from '@mantine/core';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-      <Router>
-        <App />
-      </Router>
+      <MantineProvider
+          withNormalizeCSS
+          withGlobalStyles
+          theme={{
+              colorScheme : 'dark'
+          }}
+      >
+          <Router>
+            <App />
+          </Router>
+      </MantineProvider>
   </React.StrictMode>
 );
 

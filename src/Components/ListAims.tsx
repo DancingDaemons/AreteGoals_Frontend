@@ -1,17 +1,17 @@
 import Aim from "./Aim";
 import React from "react";
-import {Box} from "@mui/material";
+import {Box} from "@mantine/core";
 
-export default function ListAims(props){
+export default function ListAims(){
 
     return(
     <Box>
         <ul>
-            {props.goals.map((goal) => {return <Aim
-                goal={goal}
-                key={goal.id}
-            />
-            })}
+            {/*{props.goals.map((goal) => {return <Aim*/}
+            {/*    goal={goal}*/}
+            {/*    key={goal.id}*/}
+            {/*/>*/}
+            {/*})}*/}
         </ul>
     </Box>
     )
