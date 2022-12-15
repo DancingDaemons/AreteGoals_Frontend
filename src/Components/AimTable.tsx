@@ -12,7 +12,7 @@ import * as React from 'react';
 //             <Table sx={{ minWidth: 650 }} aria-label="simple table">
 //                 <TableHead>
 //                     <TableRow>
-//                         <TableCell> Aim </TableCell>
+//                         <TableCell> IndividualGoal </TableCell>
 //                         <TableCell align="right"> Category </TableCell>
 //                         <TableCell align="right"> Description </TableCell>
 //                         <TableCell align="right">Actual</TableCell>

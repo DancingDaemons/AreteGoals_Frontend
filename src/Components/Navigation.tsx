@@ -97,8 +97,8 @@ const mockdata = [
     },
     {
         icon: IconCoin,
-        title: 'Free for everyone',
-        path: "/"
+        title: 'Goals',
+        path: "/logs"
 
     },
     {

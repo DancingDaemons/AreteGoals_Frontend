@@ -5,6 +5,7 @@ import {IconAlertCircle} from '@tabler/icons';
 import { useForm} from '@mantine/form';
 import {useNavigate} from "react-router-dom";
 
+
 export default function CreateGoal() {
     const [status, setStatus] = useState(0);
 

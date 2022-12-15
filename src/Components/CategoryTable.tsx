@@ -35,7 +35,7 @@ export default function CategoryTable() {
     //                 <TableHead>
     //                     <TableRow>
     //                         <TableCell>Category</TableCell>
-    //                         <TableCell align="right">Aim</TableCell>
+    //                         <TableCell align="right">IndividualGoal</TableCell>
     //                         <TableCell align="right">Desc.</TableCell>
     //                         <TableCell align="right">Actual</TableCell>
     //                         <TableCell align="right">Complete</TableCell>

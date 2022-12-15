@@ -103,10 +103,10 @@ export default function Detailed(){
             {/*                </Grid>*/}
             {/*                <Grid item xs={6} >*/}
             {/*                    <Stack spacing={2}>*/}
-            {/*                        <TextField id="outlined-basic" label="Aim" variant="filled"*/}
+            {/*                        <TextField id="outlined-basic" label="IndividualGoal" variant="filled"*/}
             {/*                                   name = "aim" onChange={(e)=>{setUpdate({...update, [e.target.name]:e.target.value})}}/>*/}
 
-            {/*                        <TextField id="outlined-basic" label="Aim" variant="filled"*/}
+            {/*                        <TextField id="outlined-basic" label="IndividualGoal" variant="filled"*/}
             {/*                                   name = "aim" onChange={(e)=>{setUpdate({...update, [e.target.name]:e.target.value})}}/>*/}
 
             {/*                        <TextField id="outlined-basic" label="Category" variant="filled"*/}
