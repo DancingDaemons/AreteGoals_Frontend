@@ -129,18 +129,18 @@ export function Navigation() {
     const { classes, theme } = useStyles();
 
     const links = mockdata.map((item) => (
-        <UnstyledButton className={classes.subLink} key={item.title}>
+        <UnstyledButton className={classes.subLink} key={item.title} >
             <Group noWrap align="flex-start">
-                <ThemeIcon size={34} variant="default" radius="md">
-                    <item.icon size={22} color={theme.fn.primaryColor()} />
-                </ThemeIcon>
-                <div>
-                    <Link to={item.path} className={classes.link}>
-                    <Text size="sm" weight={500}>
-                        {item.title}
-                    </Text>
-                    </Link>
-                </div>
+                <Link to={item.path} className={classes.link}>
+                    <ThemeIcon size={34} variant="default" radius="md">
+                        <item.icon size={22} color={theme.fn.primaryColor()} />
+                    </ThemeIcon>
+                    <div>
+                        <Text size="sm" weight={500}>
+                            {item.title}
+                        </Text>
+                    </div>
+                </Link>
             </Group>
         </UnstyledButton>
     ));

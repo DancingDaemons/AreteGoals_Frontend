@@ -42,15 +42,20 @@ interface IndividualGoalProps {
     return(
         <Card >
                 <Grid >
-                    <Grid.Col>
+                    <Grid.Col span={4}>
                             {props.goal.aim}
                     </Grid.Col>
-                    <Grid.Col >
+                    <Grid.Col span={4}>
                             {props.goal.category}
                     </Grid.Col>
-                    <Grid.Col>
+                    <Grid.Col span={4}>
                             {props.goal.description}
                     </Grid.Col>
+                    {/*<Grid.Col>*/}
+                    {/*    {props.goal.}*/}
+                    {/*</Grid.Col>*/}
+
+
                     {/*<Grid.Col>*/}
                     {/*    {dayLog.complete === true ?*/}
                     {/*            {dayLog.actual}*/}

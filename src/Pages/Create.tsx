@@ -10,16 +10,7 @@ import axios from "axios";
 
 export default function Create(){
     const { height, width } = useViewportSize();
-    const [status, setStatus] = useState(0);
-
-    const [newGoal, setNewGoal] = useState({
-        // "userId": props.userId,
-        "aim": "",
-        "category": "",
-        "description": "",
-        "quantitativeType": "",
-        "metric": ""
-    })
+    const [status, setStatus] = useState(-1);
 
     let navigate = useNavigate();
 
@@ -30,16 +21,6 @@ export default function Create(){
         }, 3000)
     }, [status])
 
-    function clear() {
-        setNewGoal({
-            // "userId": props.userId,
-            "aim": "",
-            "category": "",
-            "description": "",
-            "quantitativeType": "",
-            "metric": ""
-        })
-    }
 
     function notify() {
         if (status === 200) {
@@ -80,7 +61,7 @@ export default function Create(){
 
         await axios.post("http://localhost:8080/goal", {
             //"userId": userId,
-            "definedGoal": values.definedGoal,
+            "aim": values.definedGoal,
             "category": values.category,
             "description": values.description,
             "quantitativeType": values.quantitativeType,
@@ -164,7 +145,7 @@ export default function Create(){
                             <Grid.Col span={2}>
                             <Button
                                 onClick={() => {
-                                clear()
+                                goalForm.reset()
                             }}>
                                 Cancel
                             </Button>

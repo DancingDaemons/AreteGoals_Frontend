@@ -9,6 +9,8 @@ interface ListGoalsProps {
 
 export default function ListGoals(props: ListGoalsProps){
 
+   // const uniqueIds = [...new Set( goals.map(goal => goal.id)) ];
+
     return(
     <Box>
         <ul>
