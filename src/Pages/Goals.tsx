@@ -1,29 +1,11 @@
 import ListGoals from "../Components/ListGoals";
 import axios from "axios";
 import {useEffect, useState} from "react";
+import {GoalT, GoalsSchema, GoalsSchemaT} from "../Components/Types";
 
-export interface Log {
-    date: string,
-    complete: boolean,
-    realized: string,
-    metricRecord: number
-}
 
-// zodSchme stuff
-// type Goal = z.infer<typeof Schema>
-// eslint for typeScript
-
-export interface Goal {
-    id: string,
-    aim: string,
-    category: string,
-    description: string,
-    quantitativeType: string,
-    metric: number,
-    logs: Log[]
-}
 export default function Goals(){
-    const [goals, setGoals] = useState<Goal[]>()
+    const [goals, setGoals] = useState<GoalT[]>()
     const [status, setStatus] = useState(-1)
 
     useEffect(()=>{
@@ -35,7 +17,7 @@ export default function Goals(){
             .then(function (response) {
                 console.log(response)
                 setStatus(response.status)
-                setGoals(response.data)
+                setGoals(GoalsSchema.parse(response.data))
             }).catch(function (error){
                 setStatus(error.response.status)
                 console.log(error)
