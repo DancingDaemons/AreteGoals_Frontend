@@ -3,20 +3,27 @@ import axios from "axios";
 import {useEffect, useState} from "react";
 
 export interface Log {
-    date: Date,
+    date: string,
+    complete: boolean,
+    realized: string,
     metricRecord: number
 }
 
+// zodSchme stuff
+// type Goal = z.infer<typeof Schema>
+// eslint for typeScript
+
 export interface Goal {
+    id: string,
     aim: string,
     category: string,
     description: string,
     quantitativeType: string,
     metric: number,
-    records: Log[]
+    logs: Log[]
 }
 export default function Goals(){
-    const [goals, setGoals] = useState([])
+    const [goals, setGoals] = useState<Goal[]>()
     const [status, setStatus] = useState(-1)
 
     useEffect(()=>{
@@ -37,7 +44,7 @@ export default function Goals(){
 
     return (
         <>
-            <ListGoals goals={goals}/>
+            {goals ?    <ListGoals goals={goals}/> : <></>}
         </>
     )
 }

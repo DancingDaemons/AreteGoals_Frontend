@@ -9,15 +9,6 @@ import {useNavigate} from "react-router-dom";
 export default function CreateGoal() {
     const [status, setStatus] = useState(0);
 
-    const [newGoal, setNewGoal] = useState({
-        // "userId": props.userId,
-        "aim": "",
-        "category": "",
-        "description": "",
-        "quantitativeType": "",
-        "metric": ""
-    })
-
     let navigate = useNavigate();
 
     useEffect(() => {
@@ -26,17 +17,6 @@ export default function CreateGoal() {
             setStatus(0)
         }, 3000)
     }, [status])
-
-    function clear() {
-        setNewGoal({
-           // "userId": props.userId,
-            "aim": "",
-            "category": "",
-            "description": "",
-            "quantitativeType": "",
-            "metric": ""
-        })
-    }
 
     function notify() {
         if (status === 200) {
@@ -146,7 +126,7 @@ export default function CreateGoal() {
             <Box>
                 <Button variant="default" color="white" type={"submit"} >Submit</Button>
                 <Button onClick={() => {
-                        clear()
+                        goalForm.reset()
                     }}> Cancel
                 </Button>
             </Box>
