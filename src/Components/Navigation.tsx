@@ -98,13 +98,13 @@ const mockdata = [
     {
         icon: IconCoin,
         title: 'Goals',
-        path: "/logs"
+        path: "/goals"
 
     },
     {
         icon: IconBook,
-        title: 'Documentation',
-        path: "/"
+        title: 'Herculean Choice',
+        path: "/hercules"
     },
     {
         icon: IconFingerprint,
@@ -189,7 +189,7 @@ export function Navigation() {
                         <Link to={"/profile"} className={classes.link}>
                             Profile
                         </Link>
-                        <Link to={"/logs"}  className={classes.link}>
+                        <Link to={"/goals"}  className={classes.link}>
                             Explore
                         </Link>
                     </Group>

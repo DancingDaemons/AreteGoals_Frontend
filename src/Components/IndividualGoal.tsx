@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {Button, Card, Grid, TextInput} from "@mantine/core";
 import axios from "axios";
-import {Goal} from "../Pages/LogsPage";
+import {Goal} from "../Pages/Goals";
 
 interface IndividualGoalProps {
     goal : Goal

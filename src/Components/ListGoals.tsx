@@ -1,13 +1,13 @@
 import IndividualGoal from "./IndividualGoal";
 import React from "react";
 import {Box} from "@mantine/core";
-import {Goal} from "../Pages/LogsPage";
+import {Goal} from "../Pages/Goals";
 
-interface ListAimsProps {
+interface ListGoalsProps {
     goals: Goal[]
 }
 
-export default function ListAims(props: ListAimsProps){
+export default function ListGoals(props: ListGoalsProps){
 
     return(
     <Box>

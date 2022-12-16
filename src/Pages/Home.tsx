@@ -20,7 +20,7 @@ import mtImg from "../Images/green_mountain.png";
 import {NavLink, useNavigate} from "react-router-dom";
 import axios from "axios";
 
-export default function HomePage() {
+export default function Home() {
 
     let navigate = useNavigate();
 
